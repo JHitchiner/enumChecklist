@@ -51,25 +51,25 @@ Connect to MySQL server - mysql --user=username --password=password --host=$IP
 
 ## Internal User access (Linux):
 
-Upgrade shell - python -c "import pty;pty.spawn('/bin/bash')"
-What user you are - whoami
-User path - echo $PATH
-System version - uname -ar
-Users home directory - ls -la ~
-Sudo permissions for user - sudo -l
-Enemurate other users - cat /etc/passwd
-Password files permissions - ls -la /etc/passwd /etc/shadow
-SSH key files / config files (/home/user/.ssh /etc/ssh)
-SUID binaries - find / -perm -u=s -type f 2>/dev/null
-Search for GTFOBins Binaries - ls -la (/bin, /usr/bin, /sbin, /usr/sbin)
-Configuration files - find / -name "*conf*" -type f 2>/dev/null
-Backup files - find / -name "*.bak" -type f 2>/dev/null
-World writeable folders - find / -perm -o w -type d 2>/dev/null
-Writeable files that user doesnt own - find / -writable ! -user user -type f 2>/dev/null
-Currently running services - ps aux
-Environment variables - cat (/etc/profile, /etc/bashrc, ~/.bash_profile, ~/.bashrc, ~/.bash_logout)
-Cron jobs - crontab -u user -l
-Root home directory permissions - ls -la /root
+Upgrade shell - python -c "import pty;pty.spawn('/bin/bash')"  
+What user you are - whoami  
+User path - echo $PATH  
+System version - uname -ar  
+Users home directory - ls -la ~  
+Sudo permissions for user - sudo -l  
+Enemurate other users - cat /etc/passwd  
+Password files permissions - ls -la /etc/passwd /etc/shadow  
+SSH key files / config files (/home/user/.ssh /etc/ssh)  
+SUID binaries - find / -perm -u=s -type f 2>/dev/null  
+Search for GTFOBins Binaries - ls -la (/bin, /usr/bin, /sbin, /usr/sbin)  
+Configuration files - find / -name "*conf*" -type f 2>/dev/null  
+Backup files - find / -name "*.bak" -type f 2>/dev/null  
+World writeable folders - find / -perm -o w -type d 2>/dev/null  
+Writeable files that user doesnt own - find / -writable ! -user user -type f 2>/dev/null  
+Currently running services - ps aux  
+Environment variables - cat (/etc/profile, /etc/bashrc, ~/.bash_profile, ~/.bashrc, ~/.bash_logout)  
+Cron jobs - crontab -u user -l  
+Root home directory permissions - ls -la /root  
 
 
 # Current Versions of Common Services / Programs:
