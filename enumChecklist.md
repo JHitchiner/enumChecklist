@@ -9,44 +9,44 @@ Network Scan - nmap -sV -sC -oN $IP
 
 ### HTTP/HTTPS:
 
-Subdirectory fuzzing - gobuster dir -u http://$IP -w /usr/share/wordlists/WORDLIST
-Check robots.txt
-Check if running common web application software (wordpress, CMS, etc.)
-If HTTPS, check certificate for details
-Look for login pages
-Look for hostname
-Look for upload form
-Look for SQLI / XSS / LFI / RFI
+Subdirectory fuzzing - gobuster dir -u http://$IP -w /usr/share/wordlists/WORDLIST  
+Check robots.txt  
+Check if running common web application software (wordpress, CMS, etc.)  
+If HTTPS, check certificate for details  
+Look for login pages  
+Look for hostname  
+Look for upload form  
+Look for SQLI / XSS / LFI / RFI  
 
 ### SSH:
 
-Connect to SSH with private key - ssh -i privKey user@$IP
-Setting correct private key permissions - chmod 600 privKey
-
-If < OpenSSH 7.7 use auxiliary/scanner/ssh/ssh_enumusers to get SSH users
-Check for other version exploits
-
-Brute force password (slow) - hydra -l user -P /usr/share/wordlists/rockyou.txt $IP ssh
+Connect to SSH with private key - ssh -i privKey user@$IP  
+Setting correct private key permissions - chmod 600 privKey  
+  
+If < OpenSSH 7.7 use auxiliary/scanner/ssh/ssh_enumusers to get SSH users  
+Check for other version exploits  
+  
+Brute force password (slow) - hydra -l user -P /usr/share/wordlists/rockyou.txt $IP ssh  
 
 ### FTP:
 
-Connect as anonymous user - ftp anonymous@$IP
-Check for version exploits
+Connect as anonymous user - ftp anonymous@$IP  
+Check for version exploits  
 
 ### SMB:
 
-Connect as anonymous user - smbclient -L $IP
-Enumerate shares - smbmap -H $IP
-Check for version exploits
+Connect as anonymous user - smbclient -L $IP  
+Enumerate shares - smbmap -H $IP  
+Check for version exploits  
 
 ### DNS:
 
-Perform DNS zone transfer - dig axfr domain-name @nameserver
-Brute force DNS subdomains - dnsrecon -d hostname.url -D /usr/share/wordlists/WORDLIST -t std
+Perform DNS zone transfer - dig axfr domain-name @nameserver  
+Brute force DNS subdomains - dnsrecon -d hostname.url -D /usr/share/wordlists/WORDLIST -t std  
 
 ### MySQL:
 
-Connect to MySQL server - mysql --user=username --password=password --host=$IP
+Connect to MySQL server - mysql --user=username --password=password --host=$IP  
 
 
 ## Internal User access (Linux):
@@ -75,13 +75,13 @@ Root home directory permissions - ls -la /root
 # Current Versions of Common Services / Programs:
 
 ## Perimeter Facing Services / Programs:
-OpenSSH 8.2
-Apache httpd 2.4
-NGINX 1.17.0
-MySQL 8.0.20
-VSFTPD 3.0.3
-
+OpenSSH 8.2  
+Apache httpd 2.4  
+NGINX 1.17.0  
+MySQL 8.0.20  
+VSFTPD 3.0.3  
+  
 
 ## Internal Services / Programs
-Linux Kernel 5.6.13
-Sudo 1.9.0
+Linux Kernel 5.6.13  
+Sudo 1.9.0  
